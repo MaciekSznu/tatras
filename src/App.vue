@@ -1,12 +1,24 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">@</router-link>
-      <router-link to="/mountains">@</router-link>
-      <router-link to="/winter">@</router-link>
-      <router-link to="/flora">@</router-link>
-      <router-link to="/fauna">@</router-link>
-      <router-link to="/routes">@</router-link>
+      <router-link to="/">
+        <img src="../src/assets/images/ornament-2002422_640.png" alt="">
+      </router-link>
+      <router-link to="/mountains">
+        <img src="../src/assets/images/ornament-2002422_640.png" alt="">
+      </router-link>
+      <router-link to="/winter">
+        <img src="../src/assets/images/ornament-2002422_640.png" alt="">
+      </router-link>
+      <router-link to="/flora">
+        <img src="../src/assets/images/ornament-2002422_640.png" alt="">
+      </router-link>
+      <router-link to="/fauna">
+        <img src="../src/assets/images/ornament-2002422_640.png" alt="">
+      </router-link>
+      <router-link to="/routes">
+        <img src="../src/assets/images/ornament-2002422_640.png" alt="">
+      </router-link>
     </div>
     <router-view />
   </div>
@@ -30,11 +42,18 @@
   a {
     font-weight: bold;
     color: #2c3e50;
-    padding: 0 10px;
+    padding: 5px 5px 1px 5px;
     text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    
+    img {
+      height: 30px;
+      width: 30px;
+    }
 
     &.router-link-exact-active {
-      color: #42b983;
+      border: 2px solid black;
     }
   }
 }
