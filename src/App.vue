@@ -2,31 +2,54 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">
-        <img src="../src/assets/images/ornament-2002422_640.png" alt="">
+        <img src="../src/assets/images/ornament_90_90.png" alt="" />
       </router-link>
       <router-link to="/mountains">
-        <img src="../src/assets/images/ornament-2002422_640.png" alt="">
+        <img src="../src/assets/images/ornament_90_90.png" alt="" />
       </router-link>
       <router-link to="/winter">
-        <img src="../src/assets/images/ornament-2002422_640.png" alt="">
+        <img src="../src/assets/images/ornament_90_90.png" alt="" />
       </router-link>
       <router-link to="/flora">
-        <img src="../src/assets/images/ornament-2002422_640.png" alt="">
+        <img src="../src/assets/images/ornament_90_90.png" alt="" />
       </router-link>
       <router-link to="/fauna">
-        <img src="../src/assets/images/ornament-2002422_640.png" alt="">
+        <img src="../src/assets/images/ornament_90_90.png" alt="" />
       </router-link>
       <router-link to="/routes">
-        <img src="../src/assets/images/ornament-2002422_640.png" alt="">
+        <img src="../src/assets/images/ornament_90_90.png" alt="" />
       </router-link>
     </div>
-    <router-view />
+    <router-view id="view" />
   </div>
 </template>
 
 <style lang="scss">
 #app {
   color: #2c3e50;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#view {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (orientation: landscape) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 768px) {
+    align-items: flex-start;
+  }
 }
 
 #nav {
@@ -39,6 +62,36 @@
   width: 100%;
   padding: 20px 0;
 
+  @media (orientation: landscape) {
+    flex-direction: column;
+    width: 44px;
+    left: calc(100vw - 44px - 1rem);
+    height: 100%;
+    padding: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 21px;
+      height: calc((100vh - 6 * 44px - 80px) / 2);
+      width: 2px;
+      background-color: #c6d1ca;
+      border-radius: 1px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 20px;
+      left: 21px;
+      height: calc((100vh - 6 * 44px - 80px) / 2);
+      width: 2px;
+      background-color: #c6d1ca;
+      border-radius: 1px;
+    }
+  }
+
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -46,14 +99,17 @@
     text-decoration: none;
     border: 2px solid transparent;
     border-radius: 50%;
-    
+
     img {
       height: 30px;
       width: 30px;
+      border: none;
+      border-radius: 15px;
+      filter: invert(98%) sepia(6%) saturate(390%) hue-rotate(69deg) brightness(88%) contrast(85%);
     }
 
     &.router-link-exact-active {
-      border: 2px solid black;
+      border: 2px solid #c6d1ca;
     }
   }
 }
