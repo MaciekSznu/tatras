@@ -32,7 +32,7 @@ export default {
   background-color: $info-box-bg-color;
   border: none;
   padding: 0 2rem;
-  z-index: 1;
+  z-index: 100;
   &__title {
     font-family: $headers-font;
     color: $info-box-title-color;

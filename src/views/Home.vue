@@ -20,18 +20,20 @@
       :css="false"
       appear
     >
-      <ImagesBox :image="image" />
+      <ImagesBox
+        :options="options"
+        :images="images"
+        :transitions="transitions"
+        :captions="captions"
+      />
     </transition>
   </div>
 </template>
 
 <script>
 import gsap from 'gsap'
-import { CSSPlugin } from 'gsap/CSSPlugin'
 import InfosBox from '@/components/InfosBox.vue'
 import ImagesBox from '@/components/ImagesBox.vue'
-
-gsap.registerPlugin(CSSPlugin)
 
 export default {
   name: 'Home',
@@ -47,8 +49,18 @@ export default {
       href: 'https://tpn.pl/',
       linkText: 'Duuużo więcej informacji na temat Tatr znajdziesz na stronie ',
       link: 'TPN',
-      image: {
-        backgroundImage: `url(${require('@/assets/images/home_view_01_1920.jpg')})`
+      images: [
+        require('@/assets/images/home_view_01_1920.jpg'),
+        require('@/assets/images/home_view_02_1920.jpg'),
+        require('@/assets/images/home_view_03_1920.jpg'),
+        require('@/assets/images/home_view_04_1920.jpg')
+      ],
+      transitions: ['warp'],
+      captions: ['fade', 'book'],
+      options: {
+        autoplay: true,
+        allowFullscreen: true,
+        lazyLoad: false
       }
     }
   },
@@ -69,13 +81,13 @@ export default {
     },
     imageBeforeEnter(el) {
       // eslint-disable-next-line prettier/prettier
-      el.style.opacity = 0,
+      // el.style.opacity = 0,
       el.style.transform = 'translateX(100%)'
     },
     imageEnter(el, done) {
       gsap.to(el, {
         duration: 2,
-        opacity: 1,
+        // opacity: 1,
         transform: 'translateX(0)',
         ease: 'circ.out',
         onComplete: done
