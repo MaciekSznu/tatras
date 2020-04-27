@@ -1,17 +1,13 @@
 <template>
-  <div class="image"></div>
+  <div class="image" :style="image"></div>
 </template>
 
 <script>
 export default {
-  name: 'ImagesBox'
-  // props: {
-  //   title: String,
-  //   text: String,
-  //   linkText: String,
-  //   href: String,
-  //   link: String
-  // }
+  name: 'ImagesBox',
+  props: {
+    image: Object
+  }
 }
 </script>
 
@@ -21,9 +17,10 @@ export default {
 .image {
   width: 100%;
   height: 70%;
-  background: url('../assets/images/five-4359234_1920.jpg');
+  //background: url('../assets/images/five-4359234_1920.jpg');
   background-size: cover;
   background-position: center;
+  opacity: 0.5;
 
   @media (orientation: landscape) {
     width: 70%;

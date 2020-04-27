@@ -1,25 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">
-        <img src="../src/assets/images/ornament_90_90.png" alt="" />
-      </router-link>
-      <router-link to="/mountains">
-        <img src="../src/assets/images/ornament_90_90.png" alt="" />
-      </router-link>
-      <router-link to="/winter">
-        <img src="../src/assets/images/ornament_90_90.png" alt="" />
-      </router-link>
-      <router-link to="/flora">
-        <img src="../src/assets/images/ornament_90_90.png" alt="" />
-      </router-link>
-      <router-link to="/fauna">
-        <img src="../src/assets/images/ornament_90_90.png" alt="" />
-      </router-link>
-      <router-link to="/routes">
-        <img src="../src/assets/images/ornament_90_90.png" alt="" />
-      </router-link>
-    </div>
+    <transition name="nav-fade" appear>
+      <div id="nav">
+        <router-link to="/">
+          <img src="../src/assets/images/ornament_90_90.png" alt="" />
+        </router-link>
+        <router-link to="/mountains">
+          <img src="../src/assets/images/ornament_90_90.png" alt="" />
+        </router-link>
+        <router-link to="/winter">
+          <img src="../src/assets/images/ornament_90_90.png" alt="" />
+        </router-link>
+        <router-link to="/flora">
+          <img src="../src/assets/images/ornament_90_90.png" alt="" />
+        </router-link>
+        <router-link to="/fauna">
+          <img src="../src/assets/images/ornament_90_90.png" alt="" />
+        </router-link>
+        <router-link to="/routes">
+          <img src="../src/assets/images/ornament_90_90.png" alt="" />
+        </router-link>
+      </div>
+    </transition>
     <router-view id="view" />
   </div>
 </template>
@@ -52,6 +54,25 @@
   }
 }
 
+.nav-fade-enter {
+  opacity: 0;
+  // scale: 0;
+}
+.nav-fade-enter-to {
+  opacity: 1;
+  // scale: 1;
+}
+.nav-fade-enter-active {
+  transition: opacity 2s ease-out;
+}
+.nav-fade-leave-to {
+  opacity: 0;
+  // scale: 0;
+}
+.nav-fade-leave-active {
+  transition: opacity 2s ease-ins;
+}
+
 #nav {
   position: fixed;
   bottom: 0;
@@ -61,6 +82,7 @@
   justify-content: center;
   width: 100%;
   padding: 20px 0;
+  z-index: 1;
 
   @media (orientation: landscape) {
     flex-direction: column;
@@ -105,7 +127,8 @@
       width: 30px;
       border: none;
       border-radius: 15px;
-      filter: invert(98%) sepia(6%) saturate(390%) hue-rotate(69deg) brightness(88%) contrast(85%);
+      filter: invert(98%) sepia(6%) saturate(390%) hue-rotate(69deg)
+        brightness(88%) contrast(85%);
     }
 
     &.router-link-exact-active {

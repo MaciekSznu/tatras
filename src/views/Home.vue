@@ -1,19 +1,37 @@
 <template>
   <div class="page-wrapper">
-    <InfosBox
-      :title="title"
-      :text="text"
-      :href="href"
-      :linkText="linkText"
-      :link="link"
-    />
-    <ImagesBox />
+    <transition
+      @before-enter="infoBeforeEnter"
+      @enter="infoEnter"
+      :css="false"
+      appear
+    >
+      <InfosBox
+        :title="title"
+        :text="text"
+        :href="href"
+        :linkText="linkText"
+        :link="link"
+      />
+    </transition>
+    <transition
+      @before-enter="imageBeforeEnter"
+      @enter="imageEnter"
+      :css="false"
+      appear
+    >
+      <ImagesBox :image="image" />
+    </transition>
   </div>
 </template>
 
 <script>
+import gsap from 'gsap'
+import { CSSPlugin } from 'gsap/CSSPlugin'
 import InfosBox from '@/components/InfosBox.vue'
 import ImagesBox from '@/components/ImagesBox.vue'
+
+gsap.registerPlugin(CSSPlugin)
 
 export default {
   name: 'Home',
@@ -25,10 +43,43 @@ export default {
     return {
       title: 'Home',
       text:
-        'Stronę tą zrobiłem z miłości do Tatr i tęskony za nimi w czasach epidemii. Przy okazji szlifując pracę z VUE.js',
+        'Strona powstała z miłości do Tatr i tęskony za nimi w czasach epidemii. Przy okazji szlifowano podstawy VUE.js',
       href: 'https://tpn.pl/',
       linkText: 'Duuużo więcej informacji na temat Tatr znajdziesz na stronie ',
-      link: 'TPN'
+      link: 'TPN',
+      image: {
+        backgroundImage: `url(${require('@/assets/images/home_view_01_1920.jpg')})`
+      }
+    }
+  },
+  methods: {
+    infoBeforeEnter(el) {
+      // eslint-disable-next-line prettier/prettier
+      el.style.opacity = 0,
+      el.style.transform = 'translateX(-100%)'
+    },
+    infoEnter(el, done) {
+      gsap.to(el, {
+        duration: 2,
+        opacity: 0.8,
+        transform: 'translateX(0)',
+        ease: 'circ.out',
+        onComplete: done
+      })
+    },
+    imageBeforeEnter(el) {
+      // eslint-disable-next-line prettier/prettier
+      el.style.opacity = 0,
+      el.style.transform = 'translateX(100%)'
+    },
+    imageEnter(el, done) {
+      gsap.to(el, {
+        duration: 2,
+        opacity: 1,
+        transform: 'translateX(0)',
+        ease: 'circ.out',
+        onComplete: done
+      })
     }
   }
 }
@@ -43,4 +94,36 @@ export default {
   justify-content: flex-start;
   align-items: center;
 }
+
+// .box-fade-enter {
+//   opacity: 0;
+//   // scale: 0;
+// }
+// .box-fade-enter-to {
+//   opacity: 0.8;
+//   // scale: 1;
+// }
+// .box-fade-enter-active {
+//   transition: opacity 1.5s ease-out 0.5s;
+// }
+// .box-fade-leave-to {
+//   opacity: 0;
+//   // scale: 0;
+// }
+// .box-fade-leave-active {
+//   transition: opacity 1.5s ease-in 0.5s;
+// }
+
+// .image-fade-enter {
+//   opacity: 0.5;
+// }
+// .image-fade-enter-active {
+//   transition: opacity 0.5s ease-out;
+// }
+// .image-fade-leave-to {
+//   opacity: 0;
+// }
+// .image-fade-leave-active {
+//   transition: opacity 0.5s ease-in;
+// }
 </style>

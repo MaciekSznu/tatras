@@ -32,6 +32,7 @@ export default {
   background-color: $info-box-bg-color;
   border: none;
   padding: 0 2rem;
+  z-index: 1;
   &__title {
     font-family: $headers-font;
     color: $info-box-title-color;
@@ -67,15 +68,18 @@ export default {
     left: 0;
     width: 30vh;
     height: 30vh;
-    opacity: 0.7;
+    opacity: 0.8;
 
     @media (orientation: landscape) {
       width: 30vw;
       height: 30vw;
-      max-width: 600px;
-      max-height: 400px;
-      //border-radius: 0 0 50px 0;
+      max-width: 300px;
+      max-height: 300px;
     }
+  }
+  @media (min-width: 1024px) and (orientation: landscape) {
+    max-width: 400px;
+    max-height: 400px;
   }
 }
 </style>
