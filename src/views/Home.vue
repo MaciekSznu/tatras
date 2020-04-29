@@ -24,7 +24,6 @@
         :options="options"
         :images="images"
         :transitions="transitions"
-        :captions="captions"
       />
     </transition>
   </div>
@@ -43,7 +42,7 @@ export default {
   },
   data() {
     return {
-      title: 'Home',
+      title: 'Tatry',
       text:
         'Strona powstała z miłości do Tatr i tęskony za nimi w czasach epidemii. Przy okazji szlifowano podstawy VUE.js',
       href: 'https://tpn.pl/',
@@ -56,11 +55,10 @@ export default {
         require('@/assets/images/home_view_04_1920.jpg')
       ],
       transitions: ['warp'],
-      captions: ['fade', 'book'],
       options: {
         autoplay: true,
-        allowFullscreen: true,
-        lazyLoad: false
+        allowFullscreen: true
+        // lazyLoad: false
       }
     }
   },

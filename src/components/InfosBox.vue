@@ -31,13 +31,14 @@ export default {
   height: 30%;
   background-color: $info-box-bg-color;
   border: none;
-  padding: 0 2rem;
+  padding: 0 1rem;
   z-index: 100;
   &__title {
     font-family: $headers-font;
     color: $info-box-title-color;
     font-size: 2rem;
     font-weight: 700;
+    margin: 0.5rem 0 0.5rem 0;
   }
 
   &__text,
@@ -46,6 +47,7 @@ export default {
     color: $info-box-text-color;
     font-size: 1rem;
     font-weight: 400;
+    margin-top: 0;
   }
 
   &__link a {
@@ -66,20 +68,26 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    width: 30vh;
-    height: 30vh;
+    width: 100%;
+    height: 20vh;
     opacity: 0.8;
 
     @media (orientation: landscape) {
       width: 30vw;
-      height: 30vw;
-      max-width: 300px;
-      max-height: 300px;
+      height: 100%;
+      max-width: 30vw;
+      // max-height: 300px;
     }
   }
+
   @media (min-width: 1024px) and (orientation: landscape) {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 30vw;
+    height: 50%;
+  }
+
+  @media (min-width: 1280px) and (orientation: landscape) {
+    max-width: 20vw;
+    height: 50%;
   }
 }
 </style>
