@@ -73,7 +73,12 @@ export default {
     align-items: center;
     width: 100%;
     height: auto;
-    background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.4) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0.4) 100%
+    );
     opacity: 0.7;
     // border-radius: 50%;
     text-align: center;
@@ -84,7 +89,11 @@ export default {
 
     @media (orientation: landscape) {
       opacity: 1;
-      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
       padding-right: 64px;
       padding-left: 16px;
     }
@@ -98,22 +107,37 @@ export default {
         top: 0;
         left: 30vw;
         width: 70vw;
-        background: linear-gradient(90deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.8) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
       }
     }
 
     @media (min-width: 1024px) and (orientation: landscape) {
-      max-width: 30vw;
-      height: 50%;
-      left: 0;
-      top: 50%;
-      background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%);
+      top: auto;
+      left: auto;
+      bottom: 0;
+      right: 0;
+      width: 30vh;
+      height: 30vh;
+      border-radius: 50%;
+      text-align: center;
+      padding: 16px;
+      margin-right: calc(32px + 44px + 2.5vh);
+      margin-bottom: 32px;
+      background-color: #ffffff;
+      opacity: 0.8;
+      box-shadow: 5px 5px 5px 0px rgba(204, 204, 204, 0.8);
     }
 
     @media (min-width: 1280px) and (orientation: landscape) {
-      max-width: 20vw;
-      padding-right: 16px;
-      padding-left: 16px;
+      //   max-width: 20vw;
+      //   height: 80vw;
+      //   top: 20vw;
+      //   padding-right: 16px;
+      //   padding-left: 16px;
     }
   }
 }

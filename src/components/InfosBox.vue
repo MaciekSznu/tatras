@@ -76,18 +76,26 @@ export default {
       width: 30vw;
       height: 100%;
       max-width: 30vw;
-      // max-height: 300px;
     }
   }
 
   @media (min-width: 1024px) and (orientation: landscape) {
-    max-width: 30vw;
-    height: 50%;
+    top: 0;
+    left: 0;
+    width: 35vh;
+    height: 35vh;
+    max-width: 35vh;
+    border-radius: 50%;
+    text-align: center;
+    padding: 32px;
+    margin-top: 32px;
+    margin-left: 32px;
+    box-shadow: 5px 5px 5px 0px rgba(204, 204, 204, 0.8);
   }
 
   @media (min-width: 1280px) and (orientation: landscape) {
-    max-width: 20vw;
-    height: 50%;
+    // max-width: 20vw;
+    // height: 20vw;
   }
 }
 </style>

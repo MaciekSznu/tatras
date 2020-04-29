@@ -48,7 +48,8 @@ export default {
       text:
         'Jedni mówią "W górach jest wszystko co kocham", inni pukają się w czoło na myśl o wyjściu w góry. Dla mnie góry a zwłaszcza Tatry to miejsce gdzie odpoczywam, gdzie moge pobyc sam ze sobą i zapomnieć o codziennych problemach.',
       href: '',
-      linkText: 'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie',
+      linkText:
+        'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie',
       link: '',
       images: [
         require('@/assets/images/mountains_view_01_1920.jpg'),
@@ -59,19 +60,23 @@ export default {
       captions: [
         {
           header: 'Zachód słońca nad Tatrami',
-          text: 'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie'
+          text:
+            'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie'
         },
         {
           header: 'W drodze na Giewont',
-          text: 'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie'
+          text:
+            'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie'
         },
         {
           header: 'Polski Matterhorn',
-          text: 'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie'
+          text:
+            'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie'
         },
         {
           header: 'Czy te chmury coś przyniosą?',
-          text: 'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie'
+          text:
+            'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie'
         }
       ],
       transitions: ['warp'],
