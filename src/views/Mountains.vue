@@ -81,8 +81,11 @@ export default {
       ],
       transitions: ['warp'],
       options: {
+        autohideTime: 0,
         autoplay: true,
-        allowFullscreen: true
+        allowFullscreen: true,
+        enableGestures: true
+
         // lazyLoad: false
       }
     }

@@ -17,21 +17,21 @@
       </flux-caption>
     </template>
 
-    <!-- <template v-slot:controls>
-      <flux-controls />
-    </template> -->
+    <template v-slot:controls>
+      <flux-controls class="flux-controls" />
+    </template>
   </vue-flux>
 </template>
 
 <script>
-import { VueFlux, FluxCaption, FluxPreloader } from 'vue-flux'
+import { VueFlux, FluxCaption, FluxControls, FluxPreloader } from 'vue-flux'
 
 export default {
   name: 'ImagesBox',
   components: {
     VueFlux,
     FluxCaption,
-    // FluxControls,
+    FluxControls,
     FluxPreloader
   },
   props: {
@@ -139,6 +139,21 @@ export default {
       //   padding-right: 16px;
       //   padding-left: 16px;
     }
+  }
+
+  .flux-controls .flux-button > svg > circle,
+  .flux-controls .flux-button > svg > polygon {
+    fill: rgba(0, 0, 0, 0.2);
+  }
+
+  .flux-controls .flux-button:hover > svg line,
+  .flux-controls .flux-button:hover > svg polyline {
+    stroke: #000;
+  }
+
+  .flux-controls .flux-button:hover > svg polygon,
+  .flux-controls .flux-button:hover > svg rect {
+    fill: #000;
   }
 }
 </style>
