@@ -42,5 +42,9 @@ export default {
   @media (min-width: 768px) {
     align-items: flex-start;
   }
+
+  @media (min-width: 768px) and (orientation: landscape) {
+    justify-content: flex-end;
+  }
 }
 </style>

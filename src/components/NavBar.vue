@@ -103,8 +103,28 @@ export default {
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  //padding: 20px 0;
   z-index: 100;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 21px;
+    left: 15px;
+    height: 2px;
+    width: calc((100vw - 6 * 44px - 60px) / 2);
+    background-color: #c6d1ca;
+    border-radius: 1px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 21px;
+    right: 15px;
+    height: 2px;
+    width: calc((100vw - 6 * 44px - 60px) / 2);
+    background-color: #c6d1ca;
+    border-radius: 1px;
+  }
 
   @media (orientation: landscape) {
     flex-direction: column;
@@ -118,9 +138,9 @@ export default {
     &::before {
       content: '';
       position: absolute;
-      top: 20px;
+      top: 15px;
       left: 21px;
-      height: calc((100vh - 6 * 44px - 80px) / 2);
+      height: calc((100vh - 6 * 44px - 60px) / 2);
       width: 2px;
       background-color: #c6d1ca;
       border-radius: 1px;
@@ -129,9 +149,10 @@ export default {
     &::after {
       content: '';
       position: absolute;
-      bottom: 20px;
+      top: initial;
+      bottom: 15px;
       left: 21px;
-      height: calc((100vh - 6 * 44px - 80px) / 2);
+      height: calc((100vh - 6 * 44px - 60px) / 2);
       width: 2px;
       background-color: #c6d1ca;
       border-radius: 1px;

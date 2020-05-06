@@ -82,14 +82,10 @@ export default {
   @media (min-width: 1024px) and (orientation: landscape) {
     top: 0;
     left: 0;
-    width: 35vh;
+    width: 30vw;
     height: 35vh;
-    max-width: 35vh;
-    border-radius: 50%;
-    text-align: center;
+    //max-width: 40vh;
     padding: 32px;
-    margin-top: 32px;
-    margin-left: 32px;
     box-shadow: 5px 5px 5px 0px rgba(204, 204, 204, 0.8);
   }
 
