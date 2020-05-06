@@ -13,7 +13,9 @@
 
     <template v-slot:caption>
       <flux-caption v-slot="captions">
-        <p class="flux-caption">{{ captions.text }}</p>
+        <p class="flux-caption">
+          {{ captions.text }}
+        </p>
       </flux-caption>
     </template>
 

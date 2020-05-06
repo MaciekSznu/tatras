@@ -21,7 +21,6 @@
       appear
     >
       <ImagesBox
-        ref="slider"
         :options="options"
         :images="images"
         :transitions="transitions"
@@ -58,31 +57,15 @@ export default {
         require('@/assets/images/mountains_view_04_1920.jpg')
       ],
       captions: [
-        {
-          header: 'Zachód słońca nad Tatrami',
-          text:
-            'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie'
-        },
-        {
-          header: 'W drodze na Giewont',
-          text:
-            'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie'
-        },
-        {
-          header: 'Polski Matterhorn',
-          text:
-            'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie'
-        },
-        {
-          header: 'Czy te chmury coś przyniosą?',
-          text:
-            'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie'
-        }
+        'Zachód słońca nad Tatrami',
+        'W drodze na Giewont',
+        'Polski Matterhorn',
+        'Czy te chmury coś przyniosą?'
       ],
       transitions: ['warp'],
       options: {
         autohideTime: 0,
-        autoplay: true,
+        // autoplay: true,
         allowFullscreen: true,
         enableGestures: true
 
@@ -120,6 +103,11 @@ export default {
       })
     }
   }
+  // computed: {
+  //   captionsText() {
+  //     return this.captions
+  //   }
+  // }
 }
 </script>
 
