@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import Vue2TouchEvents from 'vue2-touch-events'
 import './assets/styles/main.scss'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
@@ -21,6 +22,8 @@ requireComponent.keys().forEach(fileName => {
 
   Vue.component(componentName, componentConfig.default || componentConfig)
 })
+
+Vue.use(Vue2TouchEvents)
 
 Vue.config.productionTip = false
 
