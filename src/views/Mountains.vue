@@ -65,11 +65,9 @@ export default {
       transitions: ['warp'],
       options: {
         autohideTime: 0,
-        // autoplay: true,
+        autoplay: true,
         allowFullscreen: true,
         enableGestures: true
-
-        // lazyLoad: false
       }
     }
   },
@@ -89,67 +87,16 @@ export default {
       })
     },
     imageBeforeEnter(el) {
-      // eslint-disable-next-line prettier/prettier
-      // el.style.opacity = 0,
       el.style.transform = 'translateX(100%)'
     },
     imageEnter(el, done) {
       gsap.to(el, {
         duration: 2,
-        // opacity: 1,
         transform: 'translateX(0)',
         ease: 'circ.out',
         onComplete: done
       })
     }
   }
-  // computed: {
-  //   captionsText() {
-  //     return this.captions
-  //   }
-  // }
 }
 </script>
-
-<style lang="scss" scoped>
-.page-wrapper {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-// .box-fade-enter {
-//   opacity: 0;
-//   // scale: 0;
-// }
-// .box-fade-enter-to {
-//   opacity: 0.8;
-//   // scale: 1;
-// }
-// .box-fade-enter-active {
-//   transition: opacity 1.5s ease-out 0.5s;
-// }
-// .box-fade-leave-to {
-//   opacity: 0;
-//   // scale: 0;
-// }
-// .box-fade-leave-active {
-//   transition: opacity 1.5s ease-in 0.5s;
-// }
-
-// .image-fade-enter {
-//   opacity: 0.5;
-// }
-// .image-fade-enter-active {
-//   transition: opacity 0.5s ease-out;
-// }
-// .image-fade-leave-to {
-//   opacity: 0;
-// }
-// .image-fade-leave-active {
-//   transition: opacity 0.5s ease-in;
-// }
-</style>

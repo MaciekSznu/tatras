@@ -111,7 +111,7 @@ export default {
         width: 70vw;
         background: linear-gradient(
           90deg,
-          rgba(255, 255, 255, 0.8) 0%,
+          rgba(255, 255, 255, 1) 0%,
           rgba(255, 255, 255, 0) 100%
         );
       }

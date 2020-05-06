@@ -4,7 +4,7 @@
     <p class="info-box__text">{{ text }}</p>
     <p class="info-box__link">
       {{ linkText }}
-      <a :href="href" target="_blank" rel="noopener noreferrer"> {{ link }} </a
+      <a :href="href" target="_blank" rel="noopener noreferrer"> {{ link }}</a
       >.
     </p>
   </div>

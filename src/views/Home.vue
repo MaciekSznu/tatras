@@ -24,6 +24,7 @@
         :options="options"
         :images="images"
         :transitions="transitions"
+        :captions="captions"
       />
     </transition>
   </div>
@@ -42,9 +43,9 @@ export default {
   },
   data() {
     return {
-      title: 'Tatry',
+      title: 'Home',
       text:
-        'Strona powstała z miłości do Tatr i tęskony za nimi w czasach epidemii. Przy okazji szlifowano podstawy VUE.js',
+        'Strona powstała z tęskony za Tatrami w czasach epidemii, przy okazji zgłębiałem podstawy VUE.js',
       href: 'https://tpn.pl/',
       linkText: 'Duuużo więcej informacji na temat Tatr znajdziesz na stronie ',
       link: 'TPN',
@@ -52,7 +53,17 @@ export default {
         require('@/assets/images/home_view_01_1920.jpg'),
         require('@/assets/images/home_view_02_1920.jpg'),
         require('@/assets/images/home_view_03_1920.jpg'),
-        require('@/assets/images/home_view_04_1920.jpg')
+        require('@/assets/images/home_view_04_1920.jpg'),
+        require('@/assets/images/winter_mountain_02_1920.jpg'),
+        require('@/assets/images/winter_mountain_04_1920.jpg')
+      ],
+      captions: [
+        'Dolina Pięciu Stawów Polskich tzw. "Piątka", w tle Krzyżne oraz fragment Orlej Perci',
+        'Wielicki Staw i Wielicki Wodospad',
+        'Tatry Zachodnie - polecam na początek przygody',
+        'Od prawej Świnica, Kościelec, na drugim planie fragment Orlej Perci i Granaty',
+        'Tatry Zachodnie w zimowej szacie',
+        'Od prawej Przełęcz Liliowe, Skrajna Turnia, Pośrednia Turnia, Świnicka Przełęcz, Świnica'
       ],
       transitions: ['warp'],
       options: {
@@ -60,7 +71,6 @@ export default {
         autoplay: true,
         allowFullscreen: true,
         enableGestures: true
-        // lazyLoad: false
       }
     }
   },
@@ -81,13 +91,11 @@ export default {
     },
     imageBeforeEnter(el) {
       // eslint-disable-next-line prettier/prettier
-      // el.style.opacity = 0,
       el.style.transform = 'translateX(100%)'
     },
     imageEnter(el, done) {
       gsap.to(el, {
         duration: 2,
-        // opacity: 1,
         transform: 'translateX(0)',
         ease: 'circ.out',
         onComplete: done
@@ -106,36 +114,4 @@ export default {
   justify-content: flex-start;
   align-items: center;
 }
-
-// .box-fade-enter {
-//   opacity: 0;
-//   // scale: 0;
-// }
-// .box-fade-enter-to {
-//   opacity: 0.8;
-//   // scale: 1;
-// }
-// .box-fade-enter-active {
-//   transition: opacity 1.5s ease-out 0.5s;
-// }
-// .box-fade-leave-to {
-//   opacity: 0;
-//   // scale: 0;
-// }
-// .box-fade-leave-active {
-//   transition: opacity 1.5s ease-in 0.5s;
-// }
-
-// .image-fade-enter {
-//   opacity: 0.5;
-// }
-// .image-fade-enter-active {
-//   transition: opacity 0.5s ease-out;
-// }
-// .image-fade-leave-to {
-//   opacity: 0;
-// }
-// .image-fade-leave-active {
-//   transition: opacity 0.5s ease-in;
-// }
 </style>
