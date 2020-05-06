@@ -69,7 +69,6 @@ export default {
 
   .flux-caption {
     top: 0;
-    // right: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,11 +81,10 @@ export default {
       rgba(255, 255, 255, 0.4) 100%
     );
     opacity: 0.7;
-    // border-radius: 50%;
     text-align: center;
     margin: 0;
     padding: 10px 32px;
-    color: black;
+    color: #000000;
     font-size: 1rem;
 
     @media (orientation: landscape) {
