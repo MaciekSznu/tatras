@@ -4,8 +4,7 @@
     <p class="info-box__text">{{ text }}</p>
     <p class="info-box__link">
       {{ linkText }}
-      <a :href="href" target="_blank" rel="noopener noreferrer"> {{ link }}</a
-      >.
+      <a :href="href" target="_blank" rel="noopener noreferrer"> {{ link }}</a>
     </p>
   </div>
 </template>
@@ -33,12 +32,17 @@ export default {
   border: none;
   padding: 0 1rem;
   z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   &__title {
     font-family: $headers-font;
     color: $info-box-title-color;
     font-size: 2rem;
     font-weight: 700;
     margin: 0.5rem 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
   }
 
   &__text,
@@ -48,6 +52,7 @@ export default {
     font-size: 1rem;
     font-weight: 400;
     margin-top: 0;
+    letter-spacing: 1px;
   }
 
   &__link a {
@@ -83,10 +88,14 @@ export default {
     top: 0;
     left: 0;
     width: 30vw;
-    height: 35vh;
-    //max-width: 40vh;
+    height: 40vh;
     padding: 32px;
     box-shadow: 5px 5px 5px 0px rgba(204, 204, 204, 0.8);
+
+    @media (min-height: 900px) {
+      height: 30vh;
+      justify-content: space-evenly;
+    }
   }
 
   @media (min-width: 1280px) and (orientation: landscape) {

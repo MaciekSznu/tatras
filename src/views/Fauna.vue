@@ -59,9 +59,9 @@ export default {
       ],
       captions: [
         'Kozica - żywy symbol Tatr, godło TPN oraz TANAP',
-        'Wilk - specjalista od jeleni (a raczej polowania na nie), tatrzańska populacja to ledwie kilkanaście osobników',
+        'Wilk - specjalista od jeleni (a raczej polowania na nie), tatrzańska populacja liczy kilkanaście osobników',
         'Kaczka krzyżówka - spotkasz ją nad każdym tatrzańskim jeziorem, ta pływała sobie po Rochackim Stawie',
-        'Niedźwiedź – największy z drapieżników lądowych. Potrafi pędzić nawet 50 km/h, a także włamać się do samochodu w poszukiwaniu pożywienia',
+        'Niedźwiedź – największy z drapieżników lądowych, potrafi pędzić nawet 50 km/h, oraz włamać się do samochodu w poszukiwaniu pożywienia',
         'Żmija Zygzakowata - spotkaliśmy się z tym dzieciakiem w drodze nad Wielicki Staw',
         'Świstak – przesypia ponad pół roku budząc się nawet o 2/3 lżejszym niż zasypiał'
       ],

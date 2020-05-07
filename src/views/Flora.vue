@@ -48,7 +48,7 @@ export default {
         'To one witaja nas w górach, piękne kwiaty, strzeliste drzewa, poskręcana kosodrzewina, gęste zarośla.',
       href: 'https://tpn.pl/poznaj/wody/rosliny',
       linkText: 'Więcej informacji na temat tatrzańskich roślin znajdziesz ',
-      link: 'tutaj',
+      link: 'tutaj.',
       images: [
         require('@/assets/images/flowers_view_01_1920.jpg'),
         require('@/assets/images/flowers_view_03_1920.jpg'),
@@ -59,7 +59,7 @@ export default {
       ],
       captions: [
         'Krokus - zakwita zazwyczaj w kwietniu, tatrzańskie doliny oblegane sa wtedy przez rzesze turystów',
-        'Kosodrzewina - jak mówi góralska legenda drzewo mo duse, i kosodrzewina zgodzieła sie, coby wyzdajali z niej krzyz na Męke Pańskom, tak sie jakosi zrobielo, co skarlała i cołga sie na kolanach, pokręcona z załości, hej...',
+        'Kosodrzewina - tam gdzie drzewa juz nie uświadczysz panuje ona, uwielbia światło, zimą stabilizuje pokrywę snieżną, objęta całkowitą ochroną',
         'Oset - pięknie kwitnie ale może pokłuć',
         'Dywan krokusów',
         'Muchomorek - niby nie roślina ale pięknie wyglądał w okolicy Rochackiego Wodospadu',

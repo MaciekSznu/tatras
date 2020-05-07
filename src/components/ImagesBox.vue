@@ -86,6 +86,7 @@ export default {
     padding: 10px 32px;
     color: #000000;
     font-size: 1rem;
+    letter-spacing: 1px;
 
     @media (orientation: landscape) {
       opacity: 1;
@@ -126,15 +127,8 @@ export default {
         rgba(255, 255, 255, 1) 50%,
         rgba(255, 255, 255, 0.1) 100%
       );
+      font-size: 1.1rem;
     }
-
-    // @media (min-width: 1280px) and (orientation: landscape) {
-    //   //   max-width: 20vw;
-    //   //   height: 80vw;
-    //   //   top: 20vw;
-    //   //   padding-right: 16px;
-    //   //   padding-left: 16px;
-    // }
   }
 
   .flux-controls {

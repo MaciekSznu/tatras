@@ -214,9 +214,9 @@ export default {
     right: 0;
     background: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0) 0%,
       white 50%,
-      rgba(255, 255, 255, 0.4) 100%
+      rgba(255, 255, 255, 0) 100%
     );
     display: flex;
     justify-content: center;
@@ -243,9 +243,9 @@ export default {
     right: 100px;
     background: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0) 0%,
       white 50%,
-      rgba(255, 255, 255, 0.4) 100%
+      rgba(255, 255, 255, 0) 100%
     );
     display: flex;
     justify-content: center;

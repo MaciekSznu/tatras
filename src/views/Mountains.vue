@@ -47,8 +47,7 @@ export default {
       text:
         'Jedni mówią "W górach jest wszystko co kocham", inni pukają się w czoło na myśl o wyjściu w góry. Dla mnie góry a zwłaszcza Tatry to miejsce gdzie odpoczywam, gdzie moge pobyc sam ze sobą i zapomnieć o codziennych problemach.',
       href: '',
-      linkText:
-        'Możnaby długo opowiadać, zamiast tego obejrzyj kilka zdjęć i albo ja pokochasz i zrozumiesz albo nie',
+      linkText: '',
       link: '',
       images: [
         require('@/assets/images/mountains_view_01_1920.jpg'),
